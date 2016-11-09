@@ -79,9 +79,9 @@ class MainInterface extends React.Component {
 
 	render() {
 		let filteredSites = [];
-		let queryText = this.state.queryText;
-		let sites = this.state.sites;
-		let categories = this.state.categories;
+		const queryText = this.state.queryText;
+		const sites = this.state.sites;
+		const categories = this.state.categories;
 
 		if (queryText.indexOf(',') > -1) { 
 			let queryText_array = queryText.split(',') 
@@ -89,20 +89,27 @@ class MainInterface extends React.Component {
 				// Trim the excess whitespace.
 				queryText_array[i] = queryText_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
 				console.log(queryText_array[i]);
+
+				let queryTemp = queryText_array[i];
+				
 				sites.forEach(function(item) {
+					//console.log(item);
 					item.categoryIds.forEach(function(id) {
+						console.log(item.siteName);
+						console.log(item.siteName.toLowerCase().indexOf(queryTemp));
 						if ( 
 							// Match SiteCategory
-							(categories[id-1].description.toLowerCase().indexOf(queryText_array[i])!=-1) ||
+							(categories[id-1].description.toLowerCase().indexOf(queryTemp)!=-1) ||
 							// Match sitename
-							(item.siteName.toLowerCase().indexOf(queryText_array[i])!=-1) 
+							(item.siteName.toLowerCase().indexOf(queryTemp)!=-1) 
 						) {
+							console.log(item);
 							filteredSites.push(item);
 
 							console.log(filteredSites);		    
 
 							// Remove duplicated object in the array
-							var arr = {};
+							let arr = {};
 
 							for ( var i=0, len=filteredSites.length; i < len; i++ )
 								arr[filteredSites[i]['siteName']] = filteredSites[i];
@@ -115,8 +122,12 @@ class MainInterface extends React.Component {
 				});				   	
 			}
 		} else {
+				console.log(queryText);
+
 				sites.forEach(function(item) {
+					console.log(item.siteName);
 					item.categoryIds.forEach(function(id) {
+						console.log(item.siteName.toLowerCase().indexOf(queryText));
 						if ( 
 							// Match SiteCategory
 							(categories[id-1].description.toLowerCase().indexOf(queryText)!=-1) ||
@@ -128,7 +139,7 @@ class MainInterface extends React.Component {
 							console.log(filteredSites);		    
 
 							// Remove duplicated object in the array
-							var arr = {};
+							let arr = {};
 
 							for ( var i=0, len=filteredSites.length; i < len; i++ )
 								arr[filteredSites[i]['siteName']] = filteredSites[i];
