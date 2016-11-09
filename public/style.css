@@ -1,0 +1,105 @@
+/** 
+*  Search Prototype
+*  Author: Joe Chang;
+*
+**/
+
+body {
+    background-color: #f2f2f2 !important;
+	font-family: 'Roboto', sans-serif !important;
+}
+
+p {
+	font-size: 1em;
+}
+.navbar-header {
+	width: 100%;
+}
+.navbar-brand {
+	display: table;
+}
+
+#adslot {
+	width: 175px;
+	height: auto;
+}
+
+.close {
+	border: 2px solid #919294;
+    width: 32px;
+    height: 32px;
+    padding: 2px 9px 8px;
+    float: right;
+    margin-top: 24px;
+}
+
+.item-list {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.site-info {
+	margin-bottom: 25px;
+}
+
+.site-url {
+	font-size: 18px;
+}
+.site-desc {
+	font-size: 14px;
+	color: #919294;
+}
+
+.search-sites {
+	margin-bottom: 30px;
+}
+
+.search-sites .input-group {
+	width: 100%;
+}
+
+#SearchSites {
+  padding-right: 30px;
+}
+
+#SearchSites + .glyphicon {
+  position: absolute;
+  right: 0;
+  padding: 8px 10px;
+  z-index: 99;
+}
+
+.no-result {
+	width: 545px;
+    border: 2px solid #919294;
+    text-align: center;
+    font-size: 18px;
+    color: #919294;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+footer {
+	background-color: #000;
+	color: #919294;
+	padding: 20px 0 40px;
+}
+
+footer p {
+	text-align: center;
+}
+
+footer hr {
+	border-top: 1px solid #919294;
+}
+
+#footer-brand {
+	display: table;
+    text-align: center;
+    width: 100%;
+}
+
+#adslot-footer {
+	width: 175px;
+	height: auto;
+}

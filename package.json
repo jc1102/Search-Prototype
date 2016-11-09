@@ -1,5 +1,5 @@
 {
-  "name": "React Node Start prototype",
+  "name": "react-node-start-prototype",
   "version": "1.0.0",
   "description": "web app built with React, React-Router, Bootstrap,Sass etc.",
   "main": "app-clients.js",
