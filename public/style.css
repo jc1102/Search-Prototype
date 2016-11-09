@@ -71,6 +71,7 @@ p {
 
 .no-result {
 	width: 545px;
+	max-width: 100%;
     border: 2px solid #919294;
     text-align: center;
     font-size: 18px;
